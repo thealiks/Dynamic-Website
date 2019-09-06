@@ -1,0 +1,92 @@
+<!-- 
+Name: Alex Singh
+ID: 687195036
+upi: asin374
+-->
+
+<!-- <!DOCTYPE html> Sorry, it breaks my footer and input boxes with this. Plus it looks better without this. -->
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="icon" href="i/favicon.ico" sizes="16x16 32x32" type="image/png">
+	<script type="text/javascript" src="koohii.js"></script>
+	<title>Compsci at UoA</title>
+</head>
+<body onpageshow="show('Home');">
+	<div id="navfill">
+		<div id="nav">
+			<ul class="navlinks">
+				<li><a id="links" href="index.html">Links</a>
+					<ul>
+						<li><a href="#" onClick="show('Home');">Home</a></li>
+						<li><a href="#" onClick="show('Courses'); getCP('courses');">Courses</a></li>
+						<li><a href="#" onClick="show('People'); getCP('people');">People</a></li>
+						<li><a href="#" onClick="show('News'); getN('newsfeed');">News</a></li>
+						<li><a href="#" onClick="show('Notices'); getN('noticesfeed');">Notices</a></li>
+						<li><a href="#" onClick="show('Guest Book'); getGB();">Guest Book</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="container">
+		
+		<div id="wrapper">
+		
+			<div id="Home">
+				<h1>Home</h1>
+				<p>Welcome to New Zealand's leading computer science department. We pride ourselves on the excellence of our staff and our students.</p>
+				<p>Welcome to the University of Auckland's Department of Computer Science, the country's largest, most diverse, and most accomplished. The department was founded in 1981. It now has more than 40 academic staff and 80 research students, and an ever-growing cohort of undergraduates.</p>
+				<p>Our department is among the top 100 Computer Science Departments in the world according to the <a href="http://www.topuniversities.com/university-rankings/university-subject-rankings/2016/computer-science-information-systems#sorting=rank+region=317+country=+faculty=+stars=false+search=">2016 QS World University Rankings</a>.</p>
+			</div>
+
+			<div id="Courses">
+				<h1>Courses</h1>
+				<div id="coursesP"> </div>
+			</div>
+			
+			<div id="People">
+				<h1>People</h1>
+				<div id="peopleP"> </div>
+			</div>
+			
+			<div id="News">
+				<h1>News</h1>
+				<div id="newsfeed"> </div>
+			</div>
+			
+			<div id="Notices">
+				<h1>Notices</h1>
+				<div id="noticesfeed"> </div>
+			</div>
+			
+			<div id="Guest Book">
+				<h1>Guest Book</h1>
+				<div>
+					<center>
+						Please leave a message!
+						<form method="post" accept-charset="UTF-8">
+							<input type="text" name="name" placeholder="Name:" style="vertical-align: middle; display: inline-block; height: 34px; width: 220px; font-family: Meiryo, Verdana; font-size: 17px;" id="name" required>
+							<textarea name="comment" placeholder="Comment:" style="vertical-align: middle; display: inline-block; height: 34px; width:220px; font-family: Meiryo, Verdana; font-size: 17px;" id="comment" required></textarea>
+							<input type="button" value="Submit" style="vertical-align: middle; display: inline-block; height: 34px;" onClick="postComment(document.getElementById('name').value,document.getElementById('comment').value); recallGB();">
+							<input type="button" value="Refresh" style="vertical-align: middle; display: inline-block; height: 34px;" onClick="getGB();">
+						</form>
+					</center>
+					<hr class="grad">
+				</div>
+				<div id="gbP"> </div>
+			</div> <!-- guest book -->
+		
+		</div> <!-- wrapper -->
+		
+		<div id="footer">
+			<center>
+				<img src="http://redsox.tcs.auckland.ac.nz/ups/logo.svg" height="150px">
+			</center>
+			<br><hr class="footGrad">
+		</div> 
+		
+	</div> <!-- container -->
+</body>
+</html>
